@@ -8,7 +8,6 @@ import {
   Stack,
 } from "@chakra-ui/react";
 
-  
 export default function HomeSection() {
   const bg = useColorModeValue("white", "gray.800");
   return (
@@ -59,15 +58,7 @@ export default function HomeSection() {
                 fontWeight="extrabold"
                 color={useColorModeValue("gray.900", "white")}
               >
-                <chakra.span display={{ base: "block", xl: "inline" }}>
-                 Provide reliable services{" "}
-                </chakra.span>
-                <chakra.span
-                  display={{ base: "block", xl: "inline" }}
-                  color={useColorModeValue("#38b6ff", "blue.400")}
-                > 
-                 made easy
-                </chakra.span>
+                User not authenticated
               </chakra.h1>
               <chakra.p
                 mt={{ base: 3, sm: 5, md: 5 }}
@@ -76,7 +67,7 @@ export default function HomeSection() {
                 mx={{ sm: "auto", lg: 0 }}
                 color="gray.500"
               >
-                Building trust among peers through blockchain technology.
+                If you want to create a project, make sure you are signed-in.
               </chakra.p>
               <Box
                 mt={{ base: 5, sm: 8 }}
@@ -94,15 +85,15 @@ export default function HomeSection() {
                     fontSize={{ base: "md", md: "lg" }}
                     rounded="lg"
                     color="white"
-                    bg={'#38b6ff'}
+                    bg={"#38b6ff"}
                     as="a"
-                    href="/jobs"
-                   _hover={{ bg: 'blue.500' }}
+                    href="/register"
+                    _hover={{ bg: "blue.500" }}
                     px={{ base: 8, md: 10 }}
                     py={{ base: 3, md: 4 }}
                     cursor="pointer"
                   >
-                    Find jobs
+                    Sign Up
                   </chakra.a>
                 </Box>
                 <Box mt={[3, 0]} ml={[null, 3]}>
@@ -118,12 +109,12 @@ export default function HomeSection() {
                     rounded="lg"
                     color="black.200"
                     as="a"
-                    href="/#problem"
+                    href="/login"
                     bg="gray.300"
                     _hover={{ bg: "gray.200" }}
                     cursor="pointer"
                   >
-                   Learn More
+                    Sign In
                   </chakra.a>
                 </Box>
               </Box>
@@ -137,8 +128,9 @@ export default function HomeSection() {
         bottom={{ lg: 0 }}
         right={{ lg: 0 }}
         w={{ lg: "50%" }}
-        border='solid 1px transparent'
+        border="solid 1px transparent"
       >
+        {/* TODO: Make this an error icon*/}
         <Image
           h={[56, 72, 96, "full"]}
           w="full"
@@ -150,4 +142,4 @@ export default function HomeSection() {
       </Box>
     </Box>
   );
-};
+}
